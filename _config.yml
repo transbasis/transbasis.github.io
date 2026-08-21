@@ -1,0 +1,18 @@
+remote_thme: "mmistakes/minimal-mistakes@4.28.1"
+
+plugins:
+  - jekyll-include-cache
+
+title: "transbasis"
+description: "Blog"
+
+url: "https://transbasis.github.io"
+baseurl: ""
+
+repository: transbasis/transbasis.github.io
+
+exclude:
+  - flake.nix
+  - flake.lock
+  - Gemfile
+  - Gemfile.lock

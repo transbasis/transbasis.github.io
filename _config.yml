@@ -3,16 +3,84 @@ remote_thme: "mmistakes/minimal-mistakes@4.28.1"
 plugins:
   - jekyll-include-cache
 
+exclude:
+  - flake.nix
+  - flake.lock
+  - Gemfile
+  - Gemfile.lock
+
+minimal_mistakes_skin: catppuccin_latte # "default", "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+
+locale: "ko-KR"
+
 title: "transbasis"
-description: "Blog"
+title_separator: "|"
+
+name: "Junhoi Kim"
+
+description: "A blog about my thoughts, experiments, and lessons learned."
 
 url: "https://transbasis.github.io"
 baseurl: ""
 
 repository: transbasis/transbasis.github.io
 
-exclude:
-  - flake.nix
-  - flake.lock
-  - Gemfile
-  - Gemfile.lock
+head_scripts:
+
+logo: /assets/images/logo.png
+
+direction: ltr
+
+breadcrumbs: false
+
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: false
+      show_date: true
+
+date_format: "%Y-%m-%d"
+
+words_per_minute: 200
+
+enable_copy_code_button: true
+
+comments: false
+
+search: true
+
+author:
+  name     : "Junhoi Kim"
+  avatar   : "/assets/images/logo.png"
+  bio      : ""
+  location : "South Korea"
+  links    :
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/transbasis"
+
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/transbasis"
+  since: "2026"
+
+paginate: 5
+
+timezone: Asia/Seoul
+
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
+
+show_taxonomy: true
